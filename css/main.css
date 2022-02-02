@@ -20,6 +20,8 @@ body {
 	flex-flow: row wrap;
 
 	margin: 0 auto;
+	width: 90%;
+	max-width: 1200px;
 }
 
 h1,
@@ -46,7 +48,6 @@ h3 {
 p {
 	font-size: 0.875em;
 	line-height: 21px;
-    padding: 0 30px;
 }
 
 /*The widths are in a percentage!*/
@@ -56,9 +57,9 @@ header {
 	align-items: center;
 	flex-flow: wrap;
 	
-	height: auto;
-	max-width: 375px;
 	margin: 0 auto;
+	height: auto;
+	width: 100%;
 }
 
 header h1 {
@@ -77,15 +78,16 @@ header div {
 
 	border-bottom: 3px solid #77a466;
 	padding: 1em;
-	width: 80%;
+	width: 100%;
 }
 
 header nav {
 	display: flex;
 	justify-content:center;
 	align-items:center;
-	padding: 0 0 2em 0;
+	padding: 0 0 1.25em 0;
 	margin: 1.25em 0 0 0;
+	width: 100%;
 }
 header nav ul {
 	display: flex;
@@ -122,7 +124,6 @@ header nav ul li a {
 	justify-content: center;
 	align-items: center;
 	flex-flow: row wrap;
-
 	margin: 0 1em 0 1em;
 }
 
@@ -152,13 +153,8 @@ header nav ul li a {
 .section-one,
 .section-two,
 .section-three {
-	display: flex;
-	justify-content: left;
-	align-items: left;
-	flex-flow: row wrap;
-
-	width: auto;
 	height: auto;
+	width: 100%;
 	border-top: 1px solid #eee;
 }
 
@@ -202,6 +198,7 @@ header nav ul li a {
 }
 
 .address {
+	align-content: left;
 	font-size: 1em;
 	line-height: 1.5em;
 }
@@ -218,11 +215,73 @@ footer {
 	text-align: center;
 	border-top: 2px solid #eee;
 	padding: 1em;
-	width: auto;
+	width: 100%;
 }
 footer span {
 	font-family: 'Galada', cursive;
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: 0.875em;
+}
+
+/* Tablet styles here */
+@media all and (min-width:768px) {
+    .bottom-section {
+		display: flex;
+		justify-content: left;
+		flex-flow: row;
+		align-items: flex-start;
+		width: 100%;
+		border-top: 2px solid #eee;
+	}
+
+	.section-one,
+	.section-two,
+	.section-three {
+		width: 27%;
+		border: none;
+	}
+
+	.section-one {
+		padding: 0 1.5em;
+	}
+	.section-two {
+		border-left: 2px solid #eee;
+		border-right: 2px solid #eee;
+		padding: 0 1.5em;
+	}
+
+	.section-three {
+		padding: 0 1.5em;
+	}
+}
+ 
+/* Desktop styles here */
+@media all and (min-width:1200px) {
+ 
+	header {
+		justify-content:flex-start;
+		flex-flow: row;
+	}
+
+	header h1 {
+		width: 100%;
+		padding: 0 10em 0 0;
+		text-align: start;
+	}
+
+	header div {
+		border: 0;
+	}
+
+	header nav {
+		width: 40%;
+	}
+ 
+	header nav ul {
+		display: flex;
+		justify-content: right;
+		flex-flow: row;
+		align-items: flex-end;
+	}
 }
