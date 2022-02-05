@@ -228,17 +228,17 @@ footer span {
 @media all and (min-width:768px) {
     .bottom-section {
 		display: flex;
-		justify-content: left;
+		justify-content: space-between;
 		flex-flow: row;
 		align-items: flex-start;
-		width: 100%;
+		width: auto;
 		border-top: 2px solid #eee;
 	}
 
 	.section-one,
 	.section-two,
 	.section-three {
-		width: 27%;
+		width: 33%;
 		border: none;
 	}
 
@@ -252,30 +252,33 @@ footer span {
 	}
 
 	.section-three {
-		padding: 0 1.5em;
+		padding: 0 0 0 1.5em;
 	}
 }
  
 /* Desktop styles here */
 @media all and (min-width:1200px) {
- 
+
 	header {
 		justify-content:flex-start;
 		flex-flow: row;
 	}
 
 	header h1 {
-		width: 100%;
-		padding: 0 10em 0 0;
+		padding: 0;
 		text-align: start;
+		width: 50%;
 	}
 
 	header div {
+		display: auto;
+		justify-content: start;
 		border: 0;
 	}
 
 	header nav {
-		width: 40%;
+		justify-content: space-between;
+		width: 50%;
 	}
  
 	header nav ul {
@@ -284,4 +287,10 @@ footer span {
 		flex-flow: row;
 		align-items: flex-end;
 	}
+
+	.top-section {
+		padding: none;
+	}
+
 }
+
